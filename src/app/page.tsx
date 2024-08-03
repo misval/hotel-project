@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <main className="absolute top-0 left-0 bg-white w-full">
-        <header className="relative align w-full h-[600px] overflow-hidden bg-red-100">
+        <header className="relative align w-full h-[600px] overflow-hidden">
           <div className="w-full h-full bg-center bg-no-repeat bg-cover"
             style={{ backgroundImage: "url('/images/hotel-image-header.jpg')" }}
           >
@@ -48,11 +48,11 @@ export default function Home() {
                 <p>Lorem ipsum dolor sit <br/> amet, consectetur <br/> adipiscing elit, sed do <br/> eiusmod tempor <br/> incididunt ut labore et <br/> dolore aliqua.</p>
               </div>
             </div>
-            <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 grow-0 lg:w-1/4 min-w-[260px]" name="Barcelona" urlImage="barcelona.jpg"/>
-            <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 lg:w-2/5" name="Suite Donostia" urlImage="suite-donostia.jpg"/>
-            <RoomCardSm styles="mb-4 lg:w-1/4 min-w-[260px]" name="Roma" urlImage="roma.jpg"/>
-            <RoomCardSm styles="mb-4 lg:ml-4 lg:w-2/5" name="Suite Guernica" urlImage="suite-guernica.jpg"/>
-            <RoomCardSm styles="lg:block hidden lg:ml-4 lg:w-1/4 min-w-[260px]" name="Paris" urlImage="paris.jpg"/>
+            <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 grow-0 lg:w-1/4 min-w-[260px] bg-[url('/images/barcelona.jpg')]" name="Barcelona"/>
+            <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 lg:w-2/5 bg-[url('/images/suite-donostia.jpg')]" name="Suite Donostia"/>
+            <RoomCardSm styles="mb-4 lg:w-1/4 min-w-[260px] bg-[url('/images/roma.jpg')]" name="Roma"/>
+            <RoomCardSm styles="mb-4 lg:ml-4 lg:w-2/5 bg-[url('/images/suite-guernica.jpg')]" name="Suite Guernica"/>
+            <RoomCardSm styles="lg:block hidden lg:ml-4 lg:w-1/4 min-w-[260px] bg-[url('/images/paris.jpg')]" name="Paris"/>
           </div>   
         </section>
 

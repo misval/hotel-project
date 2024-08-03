@@ -52,11 +52,11 @@ const NavBar = () => {
             <li className="mr-6"><Link href='/contacto'>Contacto</Link></li>
             <li className="mr-6">
               <a href="https://google.com">Como llegar</a>
-              <FontAwesomeIcon className="text-sm ml-2" icon={faArrowRight} color="white"/>
+              <FontAwesomeIcon className="text-sm ml-2" icon={faArrowRight} color="white" width={20} height={20}/>
             </li>
             <li>
               <Link href='/reservaciones'>Reservar</Link>
-              <FontAwesomeIcon className="text-sm ml-2" icon={faArrowRight} color="white"/>
+              <FontAwesomeIcon className="text-sm ml-2" icon={faArrowRight} color="white" width={20} height={20}/>
             </li>
           </ul>
         </div>

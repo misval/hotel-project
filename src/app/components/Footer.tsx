@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -30,17 +31,17 @@ const Footer = () => {
         </div>  
         <div>
           <div className="flex justify-end mt-8">
-            <img src="images/instagram.svg"></img>
-            <img src="images/facebook.svg"></img>
+            <Image src="images/instagram.svg" alt="Instagram Icon" width={25} height={25}></Image>
+            <Image src="images/facebook.svg" alt="Facebook Icon" width={25} height={25}></Image>
           </div>
         </div>
         <div className="mt-8">
           <div className="flex mb-2">
-            <img src="images/ubicacion.svg"></img>
+            <Image src="images/ubicacion.svg" alt="Icono de ubicacion" width={20} height={20}></Image>
             <p className="ml-2">Calle 22 776, General Pico, La Pampa.</p>
           </div>
           <div className="flex">
-            <img src="images/telefono.svg"></img>
+            <Image src="images/telefono.svg" alt="Icono de telefono" width={20} height={20}></Image>
             <p className="ml-2">02302 42-2760</p>
           </div>
         </div>
