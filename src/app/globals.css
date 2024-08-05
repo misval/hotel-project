@@ -34,6 +34,15 @@
   }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Ocultar scrollbar en navegadores basados en WebKit */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Ocultar scrollbar en Internet Explorer y Edge */
+  scrollbar-width: none;  /* Ocultar scrollbar en Firefox */
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);

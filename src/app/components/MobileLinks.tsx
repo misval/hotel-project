@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { greatVibes } from "../styles/fonts"
 
 const NavBarMobile = ({ isOpen , onClose }) => {
   return (
@@ -9,11 +10,11 @@ const NavBarMobile = ({ isOpen , onClose }) => {
         <FontAwesomeIcon className="text-5xl" icon={faXmark}/>
       </button>
       
-      <ul className="flex flex-col justify-center items-center space-y-4">
-        <li><Link href='/habitaciones'>Habitaciones</Link></li>
-        <li><Link href='/contacto'>Contacto</Link></li>
-        <li><a href="https://google.com">Como llegar</a></li>
-        <li><Link href='/reservaciones'>Hacer reservacion</Link></li>
+      <ul className={`flex flex-col justify-center items-center space-y-4`}>
+        <li><Link className={`${greatVibes.className} text-2xl`} href='/habitaciones'>Habitaciones</Link></li>
+        <li><Link className={`${greatVibes.className} text-2xl`} href='/contacto'>Contacto</Link></li>
+        <li><a className={`${greatVibes.className} text-2xl`} href="https://google.com">Como llegar</a></li>
+        <li><Link className={`${greatVibes.className} text-2xl`} href='/reservaciones'>Hacer reservacion</Link></li>
       </ul>  
     </div>
     

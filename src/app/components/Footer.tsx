@@ -2,13 +2,14 @@ import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import { greatVibes } from "../styles/fonts";
 
 const Footer = () => {
   return (
-    <div className="h-fit bg-zinc-800 text-white px-6 py-12 md:px-20 md:pt-20 md:pb-6">
+    <div className={`h-fit bg-zinc-800 text-white px-6 py-12 md:px-20 md:pt-20 md:pb-6`}>
       <div>
-        <p className="inline-block text-5xl">Euskadi </p>
-        <p className="inline-block ml-2 text-xl">Hotel</p>
+        <p className={`${greatVibes.className} inline-block text-5xl`}>Lorem</p>
+        <p className={`${greatVibes.className} inline-block ml-2 text-xl`}>Hotel</p>
       </div>
       <div>
         <div className="flex flex-col text-right mt-6 space-y-3">
@@ -38,11 +39,11 @@ const Footer = () => {
         <div className="mt-8">
           <div className="flex mb-2">
             <Image src="images/ubicacion.svg" alt="Icono de ubicacion" width={20} height={20}></Image>
-            <p className="ml-2">Calle 22 776, General Pico, La Pampa.</p>
+            <p className="ml-2">Calle 102 1231, General Pico, La Pampa.</p>
           </div>
           <div className="flex">
             <Image src="images/telefono.svg" alt="Icono de telefono" width={20} height={20}></Image>
-            <p className="ml-2">02302 42-2760</p>
+            <p className="ml-2">02302 12-3456</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { greatVibes, workSans } from "../styles/fonts"
 
 const ServiciosCard = ({ urlImage, altImage, title }) => {
   return (
@@ -12,8 +13,8 @@ const ServiciosCard = ({ urlImage, altImage, title }) => {
           className="object-cover"
         />
       </div>
-      <h3 className="font-semibold text-xl mb-2 mt-4">{title}</h3>
-      <p className="font-light">Lorem ipsum dolor sit amet, <br/> consectetur ad piscing elit, <br/> sed do eiusmod </p>
+      <h3 className={`${greatVibes.className}  font-semibold text-2xl mb-2 mt-4`}>{title}</h3>
+      <p className={`font-light`}>Lorem ipsum dolor sit amet, <br/> consectetur ad piscing elit, <br/> sed do eiusmod </p>
     </div>
   )
 }

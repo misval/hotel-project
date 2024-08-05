@@ -2,26 +2,35 @@ import NavBar from "@/app/components/NavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link";
-import Image from "next/image";
 
 import { Work_Sans } from 'next/font/google'
 import RoomCardSm from "./components/RoomCardSm";
 import ServiciosCard from "./components/ServiciosCard";
 import ReviewCard from "./components/ReviewCard";
 import Footer from "./components/Footer";
+import Star from "./components/Star";
+import { greatVibes, greatVibesLight } from "./styles/fonts";
 
 export default function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+  
   return (
     <>
-      <main className="absolute top-0 left-0 bg-white w-full">
+      <main className="bg-[#F1EED2] absolute top-0 left-0 bg-white w-full">
         <header className="relative align w-full h-[600px] overflow-hidden">
           <div className="w-full h-full bg-center bg-no-repeat bg-cover"
             style={{ backgroundImage: "url('/images/hotel-image-header.jpg')" }}
           >
-            <div className="absolute top-[320px] md:ml-20 m-6 text-neutral-200">
+            <div className="absolute top-[320px] md:ml-20 m-6 text-white">
               <div className="flex flex-row content-bottom items-end">
-                <p className="lg:text-7xl md:text-7xl text-6xl">Euskadi</p>
-                <p className="ml-2 lg:text-2xl md:text-2xl"><b>hotel</b></p>
+                <p className={`${greatVibes.className} lg:text-7xl md:text-7xl text-6xl`}>Lorem</p>
+                <p className={`${greatVibesLight.className} ml-2 lg:text-4xl lg:py-1 py-0.5 text-3xl`}><b>Hotel</b></p>
               </div>
               <p className="font-light mt-2"> 
                 Lorem ipsum dolor sit amet, consectetur<br/> 
@@ -41,7 +50,7 @@ export default function Home() {
           <div className="lg:mx-0 lg:flex flex-wrap justify-center">
             <div className="lg:w-1/4 lg:mt-4">
               <Link href="/habitaciones" className="mb-2 inline-flex items-center">
-                <span className="text-2xl lg:text-3xl focus:underline focus:underline-offset-2 lg:no-underline hover:underline-offset-2">Habitaciones</span>
+                <span className={`${greatVibes.className} text-3xl lg:text-3xl focus:underline focus:underline-offset-2 lg:no-underline hover:underline-offset-2`}>Habitaciones</span>
                 <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 ml-2"/>
               </Link>                    
               <div className="lg:block hidden">
@@ -49,9 +58,9 @@ export default function Home() {
               </div>
             </div>
             <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 grow-0 lg:w-1/4 min-w-[260px] bg-[url('/images/barcelona.jpg')]" name="Barcelona"/>
-            <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 lg:w-2/5 bg-[url('/images/suite-donostia.jpg')]" name="Suite Donostia"/>
+            <RoomCardSm styles="mb-4 lg:ml-4 lg:mt-4 lg:w-2/5 bg-[url('/images/suite-donostia.jpg')]" name="Suite Uruguay"/>
             <RoomCardSm styles="mb-4 lg:w-1/4 min-w-[260px] bg-[url('/images/roma.jpg')]" name="Roma"/>
-            <RoomCardSm styles="mb-4 lg:ml-4 lg:w-2/5 bg-[url('/images/suite-guernica.jpg')]" name="Suite Guernica"/>
+            <RoomCardSm styles="mb-4 lg:ml-4 lg:w-2/5 bg-[url('/images/suite-guernica.jpg')]" name="Suite Argentina"/>
             <RoomCardSm styles="lg:block hidden lg:ml-4 lg:w-1/4 min-w-[260px] bg-[url('/images/paris.jpg')]" name="Paris"/>
           </div>   
         </section>
@@ -79,70 +88,26 @@ export default function Home() {
 
         <section className="h-fit mb-20">
           <div className="flex justify-center">
-            <Image 
-              src="/images/star.jpg"
-              alt="imagen de estrella para indicar calificacion del hotel"
-              height={40}
-              width={40}
-              style={{ marginRight: 10 }}
-            />
-            <Image 
-              src="/images/star.jpg"
-              alt="imagen de estrella para indicar calificacion del hotel"
-              height={40}
-              width={40}
-              style={{ marginRight: 10 }}
-            />
-            <Image 
-              src="/images/star.jpg"
-              alt="imagen de estrella para indicar calificacion del hotel"
-              height={40}
-              width={40}
-              style={{ marginRight: 10 }}
-            />
-            <Image 
-              src="/images/star.jpg"
-              alt="imagen de estrella para indicar calificacion del hotel"
-              height={40}
-              width={40}
-              style={{ marginRight: 10 }}
-            />
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
           </div>
           <div className="text-center my-4">
             <p className="text-sm font-light tracking-widest">EN GOOGLE MAPS</p>
           </div>
-          <div className="w-100% overflow-hidden">
-              <div className="flex whitespace-nowrap first:ml-8">
-                {/* Elementos del carrusel */}
-                <ReviewCard text={1} style=""/>
-                <ReviewCard text={2} style=""/>
-                <ReviewCard text={3} style=""/>
-                <ReviewCard text={4} style=""/>
-                <ReviewCard text={5} style=""/>
-
-                <ReviewCard text={6} style="[@media(min-width:500px)]:block hidden"/>
-                <ReviewCard text={7} style="[@media(min-width:500px)]:block hidden"/>
-                <ReviewCard text={8} style="[@media(min-width:500px)]:block hidden"/>
-                <ReviewCard text={9} style="[@media(min-width:500px)]:block hidden"/>
-                <ReviewCard text={10} style="[@media(min-width:500px)]:block hidden "/>
-                {/* Añade más elementos según sea necesario */}
-              </div>
-           </div>
-          <div className="[@media(min-width:500px)]:hidden block w-full overflow-hidden">
-            <div className="flex whitespace-nowrap last:mr-6">
-              {/* Elementos del carrusel */}
-              <ReviewCard text={1} style=""/>
-              <ReviewCard text={2} style=""/>
-              <ReviewCard text={3} style=""/>
-              <ReviewCard text={4} style=""/>
-              {/* Añade más elementos según sea necesario */}
-            </div>
+          <div className="w-full lg:w-[1084px] m-auto">
+              <div className="flex flex-row lg:m-auto overflow-y-scroll mx-2 no-scrollbar">
+                  <ReviewCard/>
+                  <ReviewCard/>
+                  <ReviewCard/>
+                  <ReviewCard/>
+                  <ReviewCard/>
+              </div>                
           </div>
         </section>
-
         <Footer />
       </main>
-
       <NavBar/>
     </>
   );

@@ -9,6 +9,7 @@ import LogoEuskadiBlack from '@/../public/images/logo-hotel-euskadi.png';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { greatVibes } from "../styles/fonts";
 
 const NavBar = () => {
   // for mobile handle mobile navbar toggle
@@ -38,7 +39,7 @@ const NavBar = () => {
   return (
     <nav className={`fixed z-100 w-full transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white-100 backdrop-blur-md text-white' 
+        ? 'bg-zinc-800 backdrop-blur-md text-white' 
         : 'bg-transparent text-white'
     }`}>      
       {/* Desktop navigation */}
@@ -48,14 +49,14 @@ const NavBar = () => {
             <Image src={LogoEuskadiBlack} alt="Logo hotel euskadi" width={40} height={40} />
           </Link>
           <ul className="flex last:mr-20">
-            <li className="mr-6"><Link href='/habitaciones'>Habitaciones</Link></li>
-            <li className="mr-6"><Link href='/contacto'>Contacto</Link></li>
+            <li className="mr-6"><Link className={`${greatVibes.className} text-xl`} href='/habitaciones'>Habitaciones</Link></li>
+            <li className="mr-6"><Link className={`${greatVibes.className} text-xl`} href='/contacto'>Contacto</Link></li>
             <li className="mr-6">
-              <a href="https://google.com">Como llegar</a>
+              <a className={`${greatVibes.className} text-xl`} href="https://google.com">Como llegar</a>
               <FontAwesomeIcon className="text-sm ml-2" icon={faArrowRight} color="white" width={20} height={20}/>
             </li>
             <li>
-              <Link href='/reservaciones'>Reservar</Link>
+              <Link className={`${greatVibes.className} text-xl`} href='/reservaciones'>Reservar</Link>
               <FontAwesomeIcon className="text-sm ml-2" icon={faArrowRight} color="white" width={20} height={20}/>
             </li>
           </ul>
